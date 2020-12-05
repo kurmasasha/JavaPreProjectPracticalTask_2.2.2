@@ -7,20 +7,27 @@
 </head>
 <body>
 
-<table>
-    <thead>
+
+<h1>CARS</h1>
+
+<!--<ul>-->
+<!--    <th:block th:each="car : ${cars}">-->
+<!--        <li th:utext="${car}">..</li>-->
+<!--    </th:block>-->
+<!--</ul>-->
+
+<table border="1">
     <tr>
-        <th> CARS </th>
+<!--        <th>count</th>-->
+        <th>Car</th>
     </tr>
-    </thead>
-    <tbody>
-    <tr th:if="${cars.empty}">
-        <td colspan="1"> No Cars Available </td>
+
+    <tr th:each="car, state : ${cars}">
+<!--    <tr th:each="car, state : ${cars}">-->
+<!--        <td th:utext="${state.count}">count</td>-->
+        <td th:utext="${car}">Car</td>
     </tr>
-<!--    <tr th:each="car : ${cars}">-->
-        <td><span th:text="${cars}"></span></td>
-<!--    </tr>-->
-    </tbody>
+
 </table>
 
 </body>
