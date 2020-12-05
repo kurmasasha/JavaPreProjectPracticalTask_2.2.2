@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th> CARS </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${cars.empty}">
+        <td colspan="1"> No Cars Available </td>
+    </tr>
+<!--    <tr th:each="car : ${cars}">-->
+        <td><span th:text="${cars}"></span></td>
+<!--    </tr>-->
+    </tbody>
+</table>
+
+</body>
+</html>
